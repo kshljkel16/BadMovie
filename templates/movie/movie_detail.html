@@ -33,7 +33,7 @@
 <body>
 <!--preloading-->
 <div id="preloader">
-    <img class="logo" src="{% static 'images/logo1.png' %}" alt="" width="119" height="58">
+    <img class="logo" src="{% static 'images/logo_len.png' %}" alt="" width="119" height="58">
     <div id="status">
         <span></span>
         <span></span>
@@ -134,7 +134,7 @@
 							<span></span>
 						</div>
 				    </div>
-				    <a href="index-2.html"><img class="logo" src="images/logo1.png" alt="" width="119" height="58"></a>
+				    <a href="index-2.html"><img class="logo" src="{% static 'images/logo_len.png' %}" alt="" width="119" height="58"></a>
 			    </div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
@@ -164,7 +164,7 @@
 										<li><a href="moviegridfw.html">movie grid full width</a></li>
 									</ul>
 								</li>			
-								<li><a href="movielist.html">Movie list</a></li>
+								<li><a href="movie_list.html">Movie list</a></li>
 								<li><a href="moviesingle.html">Movie single</a></li>
 								<li class="it-last"><a href="seriessingle.html">Series single</a></li>
 							</ul>
@@ -335,61 +335,61 @@
 												<div class="cast-it">
 													{% for cast in movie.actors.all %}
 													<div class="cast-left">
-														<img src="{% static 'images/uploads/cast1.jpg' %}" alt="">
+														<img src="{{ cast.image.url }}" alt="" width="40" height="40">
 														<a href="#">{{ cast.name }}</a>
 													{% endfor %}
 													</div>
 
-<!--												</div>-->
+												</div>
 <!--												<div class="cast-it">-->
 <!--													<div class="cast-left">-->
-<!--														<img src="images/uploads/cast2.jpg" alt="">-->
-<!--														<a href="#">Chris Hemsworth</a>-->
+<!--														<img src="{% static 'images/uploads/cast2.jpg' %}" alt="">-->
+
 <!--													</div>-->
-<!--													<p>...  Thor</p>-->
+
 <!--												</div>-->
 <!--												<div class="cast-it">-->
 <!--													<div class="cast-left">-->
-<!--														<img src="images/uploads/cast3.jpg" alt="">-->
+<!--														<img src="{% static 'images/uploads/cast3.jpg' %}" alt="">-->
 <!--														<a href="#">Mark Ruffalo</a>-->
 <!--													</div>-->
-<!--													<p>...  Bruce Banner/ Hulk</p>-->
+
 <!--												</div>-->
 <!--												<div class="cast-it">-->
 <!--													<div class="cast-left">-->
-<!--														<img src="images/uploads/cast4.jpg" alt="">-->
+<!--														<img src="{% static 'images/uploads/cast4.jpg' %}" alt="">-->
 <!--														<a href="#">Chris Evans</a>-->
 <!--													</div>-->
-<!--													<p>...  Steve Rogers/ Captain America</p>-->
+
 <!--												</div>-->
 <!--												<div class="cast-it">-->
 <!--													<div class="cast-left">-->
-<!--														<img src="images/uploads/cast5.jpg" alt="">-->
+<!--														<img src="{% static 'images/uploads/cast5.jpg' %}" alt="">-->
 <!--														<a href="#">Scarlett Johansson</a>-->
 <!--													</div>-->
-<!--													<p>...  Natasha Romanoff/ Black Widow</p>-->
+
 <!--												</div>-->
 <!--												<div class="cast-it">-->
 <!--													<div class="cast-left">-->
-<!--														<img src="images/uploads/cast6.jpg" alt="">-->
+<!--														<img src="{% static 'images/uploads/cast6.jpg' %}" alt="">-->
 <!--														<a href="#">Jeremy Renner</a>-->
 <!--													</div>-->
-<!--													<p>...  Clint Barton/ Hawkeye</p>-->
+
 <!--												</div>-->
 <!--												<div class="cast-it">-->
 <!--													<div class="cast-left">-->
-<!--														<img src="images/uploads/cast7.jpg" alt="">-->
+<!--														<img src="{% static 'images/uploads/cast7.jpg' %}" alt="">-->
 <!--														<a href="#">James Spader</a>-->
 <!--													</div>-->
-<!--													<p>...  Ultron</p>-->
+
 <!--												</div>-->
 <!--												<div class="cast-it">-->
 <!--													<div class="cast-left">-->
-<!--														<img src="images/uploads/cast9.jpg" alt="">-->
+<!--														<img src="{% static 'images/uploads/cast9.jpg' %}" alt="">-->
 <!--														<a href="#">Don Cheadle</a>-->
 <!--													</div>-->
-<!--													<p>...  James Rhodes/ War Machine</p>-->
-												</div>
+
+<!--												</div>-->
 											</div>
 											<div class="title-hd-sm">
 												<h4>User reviews</h4>
@@ -1057,7 +1057,7 @@
 	<div class="container">
 		<div class="flex-parent-ft">
 			<div class="flex-child-ft item1">
-				 <a href="index-2.html"><img class="logo" src="images/logo1.png" alt=""></a>
+				 <a href="index-2.html"><img class="logo" src="" alt=""></a>
 				 <p>5th Avenue st, manhattan<br>
 				New York, NY 10001</p>
 				<p>Call us: <a href="#">(+01) 202 342 6789</a></p>

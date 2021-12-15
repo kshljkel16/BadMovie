@@ -13,16 +13,16 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='actor',
             name='image',
-            field=models.ImageField(upload_to='movies', verbose_name='Изображение'),
+            field=models.ImageField(upload_to='movie', verbose_name='Изображение'),
         ),
         migrations.AlterField(
             model_name='movie',
             name='poster',
-            field=models.ImageField(upload_to='movies', verbose_name='Постер'),
+            field=models.ImageField(upload_to='movie', verbose_name='Постер'),
         ),
         migrations.AlterField(
             model_name='movieshots',
             name='image',
-            field=models.ImageField(upload_to='movies', verbose_name='Изображение'),
+            field=models.ImageField(upload_to='movie', verbose_name='Изображение'),
         ),
     ]

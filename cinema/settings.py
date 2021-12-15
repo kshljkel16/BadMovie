@@ -156,5 +156,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'elinalen16@gmail.com'
 EMAIL_HOST_PASSWORD = 'btsismylove7'
 
-MEDIA_URL = '/movies/'
-MEDIA_ROOT = BASE_DIR / 'movies'
+MEDIA_URL = '/movie/'
+MEDIA_ROOT = BASE_DIR / 'movie'
