@@ -319,24 +319,50 @@
 						<li><a href="#tab4"> #Most reviewed</a></li>                        
 					</ul>
 				    <div class="tab-content">
-				        <div id="tab1" class="tab active">
+						<div id="tab1" class="tab active">-->
 				            <div class="row">
-								{% for movie in movie_list %}
 				            	<div class="slick-multiItem">
-<!--				            		<div class="slide-it">-->
-				            			<div class="movie-item">
-					            			<div class="mv-img">
-					            				<img src="{{ movie.poster.url }}" alt="" width="185" height="284">
-					            			</div>
-					            			<div class="hvr-inner">
-					            				<a  href="{{ movie.get_absolute_url }}"> Read more <i class="ion-android-arrow-dropright"></i> </a>
-					            			</div>
-					            			<div class="title-in">
-					            				<h6><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h6>
-					            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
-					            			</div>
+									{% for movie in movie_list %}
+									<div class="slide-it">
+													<div class="movie-item">
+														<div class="mv-img">
+															<img src="{{movie.poster.url}}" alt="" width="185" height="284">
+														</div>
+														<div class="hvr-inner">
+															<a  href="{{ movie.get_absolute_url }}"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+														</div>
+														<div class="title-in">
+															<h6><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h6>
+															<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+														</div>
+													</div>
+												</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+<!--					</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				        <div id="tab1" class="tab active">-->
+<!--				            <div class="row">-->
+<!--				            	<div class="slick-multiItem">-->
+<!--									<div class="slide-it">-->
+
+<!--				            			<div class="movie-item">-->
+<!--					            			<div class="mv-img">-->
+<!--					            				<img src="{{ movie.poster.url }}" alt="" width="185" height="284">-->
+<!--					            			</div>-->
+<!--					            			<div class="hvr-inner">-->
+<!--					            				<a  href="{{ movie.get_absolute_url }}"> Read more <i class="ion-android-arrow-dropright"></i> </a>-->
+<!--					            			</div>-->
+<!--					            			<div class="title-in">-->
+<!--					            				<h6><a href="{{ movie.get_absolute_url }}">{{ movie.title }}</a></h6>-->
+<!--					            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>-->
+<!--					            			</div>-->
 <!--					            		</div>-->
-				            		</div>
+
+<!--				            		</div>-->
 <!--									<div class="slide-it">-->
 <!--										<div class="movie-item">-->
 <!--					            			<div class="mv-img">-->
@@ -449,23 +475,27 @@
 <!--					            			</div>-->
 <!--					            		</div>-->
 <!--				            		</div>-->
-				            	</div>
-								{% endfor %}
-				            </div>
-				        </div>
+<!--				            	</div>-->
+
+
 				        <div id="tab2" class="tab">
+
 				           <div class="row">
+
 				            	<div class="slick-multiItem">
+
 				            		<div class="slide-it">
+
+
 				            			<div class="movie-item">
 					            			<div class="mv-img">
-					            				<img src="{% static 'images/uploads/mv-item5.jpg' %}" alt="" width="185" height="284">
+					            				<img src="{{ film.poster.url }}" alt="" width="185" height="284">
 					            			</div>
 					            			<div class="hvr-inner">
-					            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+					            				<a  href="{{ film.get_absolute_url }}"> Read more <i class="ion-android-arrow-dropright"></i> </a>
 					            			</div>
 					            			<div class="title-in">
-					            				<h6><a href="#">Interstellar</a></h6>
+					            				<h6><a href="{{ film.get_absolute_url }}">{{ film.title }}</a></h6>
 					            				<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
 					            			</div>
 					            		</div>
@@ -528,6 +558,7 @@
 				            		</div>
 				            	</div>
 				            </div>
+
 				        </div>
 				        <div id="tab3" class="tab">
 				        	<div class="row">
@@ -695,13 +726,15 @@
 						<li><a href="#tab24"> #Most reviewed</a></li>                        
 					</ul>
 				    <div class="tab-content">
+
 				        <div id="tab21" class="tab">
 				            <div class="row">
 				            	<div class="slick-multiItem">
+									{% for film in movie_list %}
 				            		<div class="slide-it">
 				            			<div class="movie-item">
 					            			<div class="mv-img">
-					            				<img src="{% static 'images/uploads/mv-item1.jpg' %}" alt="" width="185" height="284">
+					            				<img src="{{ film.poster.url }}" alt="" width="185" height="284">
 					            			</div>
 					            			<div class="hvr-inner">
 					            				<a  href="moviesingle.html"> Read more <i class="ion-android-arrow-dropright"></i> </a>
@@ -712,6 +745,7 @@
 					            			</div>
 					            		</div>
 				            		</div>
+									{% endfor %}
 									<div class="slide-it">
 										<div class="movie-item">
 					            			<div class="mv-img">
@@ -1394,7 +1428,7 @@
 					<div class="sb-twitter sb-it">
 						<h4 class="sb-title">Tweet to us</h4>
 						<div class="slick-tw">
-							<div class="tweet item" id=""><!-- Put your twiter id here -->
+							<div class="tweet item" id=" "><!-- Put your twiter id here -->
 							</div>
 							<div class="tweet item" id=""><!-- Put your 2nd twiter account id here -->
 							</div>
