@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load movie_tag %}
 <!--[if IE 7]>
 <html class="ie ie7 no-js" lang="en-US">
 <![endif]-->
@@ -50,85 +51,87 @@
 </div>
 <!--end of preloading-->
 <!--login form popup-->
-<div class="login-wrapper" id="login-content">
-    <div class="login-content">
-        <a href="#" class="close">x</a>
-        <h3>Login</h3>
-        <form method="post" action="#">
-        	<div class="row">
-        		 <label for="username">
-                    Username:
-                    <input type="text" name="username" id="username" placeholder="Hugh Jackman" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
-                </label>
-        	</div>
-           
-            <div class="row">
-            	<label for="password">
-                    Password:
-                    <input type="password" name="password" id="password" placeholder="******" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
-                </label>
-            </div>
-            <div class="row">
-            	<div class="remember">
-					<div>
-						<input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
-					</div>
-            		<a href="#">Forget password ?</a>
-            	</div>
-            </div>
-           <div class="row">
-           	 <button type="submit">Login</button>
-           </div>
-        </form>
-        <div class="row">
-        	<p>Or via social</p>
-            <div class="social-btn-2">
-            	<a class="fb" href="#"><i class="ion-social-facebook"></i>Facebook</a>
-            	<a class="tw" href="#"><i class="ion-social-twitter"></i>twitter</a>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="login-wrapper" id="login-content">-->
+<!--    <div class="login-content">-->
+<!--        <a href="#" class="close">x</a>-->
+<!--        <h3>Login</h3>-->
+<!--        <form method="post" action="#">-->
+<!--        	<div class="row">-->
+<!--        		 <label for="username">-->
+<!--                    Username:-->
+<!--                    <input type="text" name="username" id="username" placeholder="Hugh Jackman" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />-->
+<!--                </label>-->
+<!--        	</div>-->
+<!--           -->
+<!--            <div class="row">-->
+<!--            	<label for="password">-->
+<!--                    Password:-->
+<!--                    <input type="password" name="password" id="password" placeholder="******" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />-->
+<!--                </label>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--            	<div class="remember">-->
+<!--					<div>-->
+<!--						<input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>-->
+<!--					</div>-->
+<!--            		<a href="#">Forget password ?</a>-->
+<!--            	</div>-->
+<!--            </div>-->
+<!--           <div class="row">-->
+<!--           	 <button type="submit">Login</button>-->
+<!--           </div>-->
+<!--        </form>-->
+<!--        <div class="row">-->
+<!--        	<p>Or via social</p>-->
+<!--            <div class="social-btn-2">-->
+<!--            	<a class="fb" href="#"><i class="ion-social-facebook"></i>Facebook</a>-->
+<!--            	<a class="tw" href="#"><i class="ion-social-twitter"></i>twitter</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+{{ login.html }}
 <!--end of login form popup-->
-<!--signup form popup-->
-<div class="login-wrapper"  id="signup-content">
-    <div class="login-content">
-        <a href="#" class="close">x</a>
-        <h3>sign up</h3>
-        <form method="post" action="#">
-            <div class="row">
-                 <label for="username-2">
-                    Username:
-                    <input type="text" name="username" id="username-2" placeholder="Hugh Jackman" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
-                </label>
-            </div>
-           
-            <div class="row">
-                <label for="email-2">
-                    your email:
-                    <input type="password" name="email" id="email-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
-                </label>
-            </div>
-             <div class="row">
-                <label for="password-2">
-                    Password:
-                    <input type="password" name="password" id="password-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
-                </label>
-            </div>
-             <div class="row">
-                <label for="repassword-2">
-                    re-type Password:
-                    <input type="password" name="password" id="repassword-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
-                </label>
-            </div>
-           <div class="row">
-             <button type="submit">sign up</button>
-           </div>
-        </form>
-    </div>
-</div>
-<!--end of signup form popup-->
 
+<!--signup form popup-->
+<!--<div class="login-wrapper"  id="signup-content">-->
+<!--    <div class="login-content">-->
+<!--        <a href="#" class="close">x</a>-->
+<!--        <h3>sign up</h3>-->
+<!--        <form method="post" action="#">-->
+<!--            <div class="row">-->
+<!--                 <label for="username-2">-->
+<!--                    Username:-->
+<!--                    <input type="text" name="username" id="username-2" placeholder="Hugh Jackman" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />-->
+<!--                </label>-->
+<!--            </div>-->
+<!--           -->
+<!--            <div class="row">-->
+<!--                <label for="email-2">-->
+<!--                    your email:-->
+<!--                    <input type="password" name="email" id="email-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />-->
+<!--                </label>-->
+<!--            </div>-->
+<!--             <div class="row">-->
+<!--                <label for="password-2">-->
+<!--                    Password:-->
+<!--                    <input type="password" name="password" id="password-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />-->
+<!--                </label>-->
+<!--            </div>-->
+<!--             <div class="row">-->
+<!--                <label for="repassword-2">-->
+<!--                    re-type Password:-->
+<!--                    <input type="password" name="password" id="repassword-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />-->
+<!--                </label>-->
+<!--            </div>-->
+<!--           <div class="row">-->
+<!--             <button type="submit">sign up</button>-->
+<!--           </div>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</div>-->
+<!--end of signup form popup-->
+{{ signup.html }}
 <!-- BEGIN | Header -->
 <header class="ht-header">
 	<div class="container">
@@ -156,9 +159,8 @@
 							Home <i class="fa fa-angle-down" aria-hidden="true"></i>
 							</a>
 							<ul class="dropdown-menu level1">
-								<li><a href="index-2.html">Home 01</a></li>
-								<li><a href="homev2.html">Home 02</a></li>
-								<li><a href="homev3.html">Home 03</a></li>
+								<li><a href="/">Home</a></li>
+
 							</ul>
 						</li>	
 						<li class="dropdown first">
@@ -173,10 +175,13 @@
 										<li><a href="aboutv2.html">About Us 02</a></li>
 									</ul>
 								</li> -->
-								<li><a href="moviegrid.html">Movie grid</a></li>
-								<li><a href="moviegridfw.html">movie grid full width</a></li>
-								<li><a href="movielist.html">Movie list</a></li>
-								<li class="it-last"><a href="moviesingle.html">Movie single</a></li>
+								{% get_categories as categories %}
+								{% for category in categories %}
+									<li><a href="/">{{ category.name }}</a></li>
+								{% endfor %}
+<!--								<li><a href="moviegridfw.html">movie grid full width</a></li>-->
+<!--								<li><a href="movielist.html">Movie list</a></li>-->
+<!--								<li class="it-last"><a href="moviesingle.html">Movie single</a></li>-->
 							</ul>
 						</li>
 						<li class="dropdown first">
@@ -224,8 +229,20 @@
 							</ul>
 						</li>                
 						<li><a href="#">Help</a></li>
-						<li class="loginLink"><a href="#">LOG In</a></li>
-						<li class="btn signupLink"><a href="#">sign up</a></li>
+						<li><a href="#">Help</a></li>
+						{% if user.is_authenticated %}
+						<li class="loginLink"><a href="{%url 'logout' %}" title="">Log Out</a></li>
+						<li class="btn signupLink">{{ account.username }}</li>
+
+                    	{% endif %}
+
+                    	{% if not user.is_authenticated %}
+						<li><a href="{% url 'login'%}">LOG In</a></li>
+
+						<li ><a href="{% url 'registration' %}">sign up</a></li>
+<!--class="btn signupLink" -->
+						{% endif %}
+
 					</ul>
 				</div>
 			<!-- /.navbar-collapse -->
@@ -233,76 +250,76 @@
 	</div>
 </header>
 <!-- END | Header -->
-
-<div class="sliderv2 movie-items slider sliderv3">
-	<div class="container">
-		<div class="row">
-	    	<div class="slider-single-item">
-	    		<div class="movie-item">
-	    			<div class="title-in">
-	    				<div class="cate">
-	    					<span class="yell"><a href="#">Action</a></span>
-	    					<span class="orange"><a href="#">advanture</a></span>
-	    				</div>
-	    				<h1><a href="#">Guns of the Navarone <span>2013</span></a></h1>
-						<div class="social-btn">
-							<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
-							<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
-							<div class="hover-bnt">
-								<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
-								<div class="hvr-item">
-									<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
-									<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
-									<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
-									<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
-								</div>
-							</div>		
-						</div>
-	    				<div class="mv-details">
-	    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
-	    					<ul class="mv-infor">
-	    						<li>  Run Time: 2h21’ </li>
-	    						<li>  Rated: PG-13  </li>
-	    						<li>  Release: 1 May 2015</li>
-	    					</ul>
-	    				</div>	
-	    			</div>		
-	    		</div>
-	    		<div class="movie-item">
-	    			<div class="title-in">
-	    				<div class="cate">
-	    					<span class="yell"><a href="#">Action</a></span>
-	    					<span class="orange"><a href="#">advanture</a></span>
-	    				</div>
-	    				<h1><a href="#">Guns of the Navarone <span>2013</span></a></h1>
-						<div class="social-btn">
-							<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
-							<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
-							<div class="hover-bnt">
-								<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
-								<div class="hvr-item">
-									<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
-									<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
-									<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
-									<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
-								</div>
-							</div>		
-						</div>
-	    				<div class="mv-details">
-	    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
-	    					<ul class="mv-infor">
-	    						<li>  Run Time: 2h21’ </li>
-	    						<li>  Rated: PG-13  </li>
-	    						<li>  Release: 1 May 2015</li>
-	    					</ul>
-	    				</div>
-	    				
-	    			</div>		
-	    		</div>
-	    	</div>
-	    </div>
-	</div>
-</div>
+{% get_last_movies %}
+<!--<div class="sliderv2 movie-items slider sliderv3">-->
+<!--	<div class="container">-->
+<!--		<div class="row">-->
+<!--	    	<div class="slider-single-item">-->
+<!--	    		<div class="movie-item">-->
+<!--	    			<div class="title-in">-->
+<!--	    				<div class="cate">-->
+<!--	    					<span class="yell"><a href="#">Action</a></span>-->
+<!--	    					<span class="orange"><a href="#">advanture</a></span>-->
+<!--	    				</div>-->
+<!--	    				<h1><a href="#">Guns of the Navarone <span>2013</span></a></h1>-->
+<!--						<div class="social-btn">-->
+<!--							<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>-->
+<!--							<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>-->
+<!--							<div class="hover-bnt">-->
+<!--								<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>-->
+<!--								<div class="hvr-item">-->
+<!--									<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>-->
+<!--									<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>-->
+<!--									<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>-->
+<!--									<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>-->
+<!--								</div>-->
+<!--							</div>		-->
+<!--						</div>-->
+<!--	    				<div class="mv-details">-->
+<!--	    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>-->
+<!--	    					<ul class="mv-infor">-->
+<!--	    						<li>  Run Time: 2h21’ </li>-->
+<!--	    						<li>  Rated: PG-13  </li>-->
+<!--	    						<li>  Release: 1 May 2015</li>-->
+<!--	    					</ul>-->
+<!--	    				</div>	-->
+<!--	    			</div>		-->
+<!--	    		</div>-->
+<!--	    		<div class="movie-item">-->
+<!--	    			<div class="title-in">-->
+<!--	    				<div class="cate">-->
+<!--	    					<span class="yell"><a href="#">Action</a></span>-->
+<!--	    					<span class="orange"><a href="#">advanture</a></span>-->
+<!--	    				</div>-->
+<!--	    				<h1><a href="#">Guns of the Navarone <span>2013</span></a></h1>-->
+<!--						<div class="social-btn">-->
+<!--							<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>-->
+<!--							<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>-->
+<!--							<div class="hover-bnt">-->
+<!--								<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>-->
+<!--								<div class="hvr-item">-->
+<!--									<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>-->
+<!--									<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>-->
+<!--									<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>-->
+<!--									<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>-->
+<!--								</div>-->
+<!--							</div>		-->
+<!--						</div>-->
+<!--	    				<div class="mv-details">-->
+<!--	    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>-->
+<!--	    					<ul class="mv-infor">-->
+<!--	    						<li>  Run Time: 2h21’ </li>-->
+<!--	    						<li>  Rated: PG-13  </li>-->
+<!--	    						<li>  Release: 1 May 2015</li>-->
+<!--	    					</ul>-->
+<!--	    				</div>-->
+<!--	    				-->
+<!--	    			</div>		-->
+<!--	    		</div>-->
+<!--	    	</div>-->
+<!--	    </div>-->
+<!--	</div>-->
+<!--</div>-->
 <div class="movie-items">
 	<div class="container">
 		<div class="row ipad-width">
@@ -1445,7 +1462,7 @@
 	<div class="container">
 		<div class="flex-parent-ft">
 			<div class="flex-child-ft item1">
-				 <a href="index-2.html"><img class="logo" src="{% static 'images/logo1.png' %}" alt=""></a>
+				 <a href="{% url 'home' %}"><img class="logo" src="{% static 'images/logo1.png' %}" alt=""></a>
 				 <p>5th Avenue st, manhattan<br>
 				New York, NY 10001</p>
 				<p>Call us: <a href="#">(+01) 202 342 6789</a></p>

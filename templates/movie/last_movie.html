@@ -1,0 +1,77 @@
+{% for movie in last_movies %}
+<div class="sliderv2 movie-items slider sliderv3">
+	<div class="container">
+		<div class="row">
+	    	<div class="slider-single-item">
+	    		<div class="movie-item">
+	    			<div class="title-in">
+
+	    				<div class="cate">
+
+	    					<span class="yell"><a href="#">{{ movie.category }}</a></span>
+
+<!--	    					<span class="orange"><a href="#">advanture</a></span>-->
+	    				</div>
+
+	    				<h1><a href="{{ movie.get_absolute_url }}">{{ movie.title }} <span>{{ movie.year }}</span></a></h1>
+						<div class="social-btn">
+							<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+							<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
+							<div class="hover-bnt">
+								<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
+								<div class="hvr-item">
+									<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+									<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+									<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+									<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+								</div>
+							</div>
+						</div>
+	    				<div class="mv-details">
+	    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+	    					<ul class="mv-infor">
+	    						<li>  {{ movie.tagline }} </li>
+	    						<li>  Rated: PG-13  </li>
+	    						<li> {{ movie.world_premiere }}</li>
+	    					</ul>
+	    				</div>
+
+	    			</div>
+	    		</div>
+	    		<div class="movie-item">
+	    			<div class="title-in">
+	    				<div class="cate">
+	    					<span class="yell"><a href="#">Action</a></span>
+	    					<span class="orange"><a href="#">advanture</a></span>
+	    				</div>
+	    				<h1><a href="#">Guns of the Navarone <span>2013</span></a></h1>
+						<div class="social-btn">
+							<a href="#" class="parent-btn"><i class="ion-play"></i> Watch Trailer</a>
+							<a href="#" class="parent-btn"><i class="ion-heart"></i> Add to Favorite</a>
+							<div class="hover-bnt">
+								<a href="#" class="parent-btn"><i class="ion-android-share-alt"></i>share</a>
+								<div class="hvr-item">
+									<a href="#" class="hvr-grow"><i class="ion-social-facebook"></i></a>
+									<a href="#" class="hvr-grow"><i class="ion-social-twitter"></i></a>
+									<a href="#" class="hvr-grow"><i class="ion-social-googleplus"></i></a>
+									<a href="#" class="hvr-grow"><i class="ion-social-youtube"></i></a>
+								</div>
+							</div>
+						</div>
+	    				<div class="mv-details">
+	    					<p><i class="ion-android-star"></i><span>7.4</span> /10</p>
+	    					<ul class="mv-infor">
+	    						<li>  Run Time: 2h21’ </li>
+	    						<li>  Rated: PG-13  </li>
+	    						<li>  Release: 1 May 2015</li>
+	    					</ul>
+	    				</div>
+
+	    			</div>
+	    		</div>
+	    	</div>
+
+	    </div>
+	</div>
+</div>
+{% endfor %}

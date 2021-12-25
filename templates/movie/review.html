@@ -1,0 +1,66 @@
+{% load crispy_forms_tags %}
+<style>
+    .container {
+      color:white;
+      }
+    .col-sm-6 form-group p-0 editContent{
+      margin-left: 19vh;
+      width: 300px !important;
+      }
+     .col-sm-6 form-group ml-sm-3 editContent {
+     width: 1%;
+
+     }
+      .form-control {
+        max-width:729px;
+        padding: 5px;
+        }
+      #contactusername{
+        width: 300px;
+      }
+      #contactemail{
+        width: 368px;
+      }
+      form{
+      width: 731px;
+      }
+
+
+</style>
+<div class="container ">
+	{{ crispy }}
+  <form action="{% url 'add_review' movie.id %}" method="post" class="mt-4" id="formReview">
+    {% csrf_token %}
+    <input type="hidden" name="parent" id="contactparent" value="">
+    <div class="form-group editContent">
+      <label for="contactcomment" class="editContent" style="color: white">
+        Ваш комментарий
+      </label>
+      <textarea class="form-control border" rows="5" name="text" id="contactcomment" required=""></textarea>
+    </div>
+    <div class="d-sm-flex" id="width300" style="margin-left: -17px;">
+      <div class="col-sm-6 form-group p-0 editContent" style="width: 350px;">
+        <label for="contactusername" class="editContent" style="color: white">
+          Имя
+        </label>
+        <input type="text" class="form-control border" name="name" id="contactusername" required="">
+      </div>
+      <div class="col-sm-6 form-group ml-sm-3 editContent" >
+        <label for="contactemail" class="editContent">
+          Email
+        </label>
+        <input type="email" class="form-control border" name="email" id="contactemail" required="">
+      </div>
+    </div>
+<!--    <div class="butti">-->
+      <button type="submit">Submit</button>
+<!--    </div>-->
+  </form>
+
+</div>
+<script>
+	function addReview(name, id) {
+		document.getElementById("contactparent").value = id;
+		document.getElementById("contactcomment").innerText = `${name}, `
+	}
+</script>
