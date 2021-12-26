@@ -140,10 +140,9 @@
 							</ul>
 						</li>
 						<li><a href="#">Help</a></li>
-						<li class="loginLink"><a href="#">LOG In</a></li>
-<!--						<a class="btn signupLink" href="{% url 'register' %}">sign up</a>-->
-						<li class="btn signupLink" ><a href="{% url 'register' %}">sign up</a></li>
-<!--						<a class="btn signupLink" href="{% url 'register' %}">sign up</a>-->
+						<li class="loginLink"><a href="{% url 'login' %}">LOG In</a></li>
+
+						<li class="btn signupLink" ><a href="{% url 'registration' %}">sign up</a></li>
 
 						<li>{{ account.username }}</li>
 					</ul>
@@ -156,7 +155,7 @@
 
 <!--ACTIIV-->
 {% load static %}
-{% load bootstrap %}
+
 {% block content %}
 
 <div class="activ">

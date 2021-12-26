@@ -231,7 +231,7 @@
 						<li><a href="#">Help</a></li>
 						<li><a href="#">Help</a></li>
 						{% if user.is_authenticated %}
-						<li class="loginLink"><a href="{%url 'logout' %}" title="">Log Out</a></li>
+						<li ><a href="{%url 'logout' %}" title="">Log Out</a></li>
 						<li class="btn signupLink">{{ account.username }}</li>
 
                     	{% endif %}

@@ -33,12 +33,17 @@ class RegistrationForm(forms.ModelForm):
         if password != password_confirm:
             print('PPPPPPPPPPPP')
             raise forms.ValidationError('Пароли не совпадают')
+        print('Passsss')
         return self.cleaned_data
 
     def save(self):
+        print('Create')
         user = User.objects.create(**self.cleaned_data)
         print(dir(user))
-        user.create_activation_code()
+        code = get_random_string(10)
+        user.activation_code = code
+        user.save()
+        print('Codeeeeee')
         send_activation_mail.delay(user.email, user.activation_code)
         return user
 

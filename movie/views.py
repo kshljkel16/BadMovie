@@ -41,10 +41,10 @@ class MoviesListView(ListView):
     queryset = Movie.objects.filter(draft=False)
     template_name = "movie/homev3.html"
 
-    def get_queryset(self):
-        qs = super().get_queryset()
-        qs['register'] = UserRegisterForm
-        return qs
+    # def get_queryset(self):
+    #     qs = super().get_queryset()
+    #     qs['register'] = UserRegisterForm
+    #     return qs
 
 
 class AddReview(View):

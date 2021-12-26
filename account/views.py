@@ -13,11 +13,11 @@ class RegistrationView(CreateView):
     model = User
     form_class = RegistrationForm
     template_name = 'movie/signup.html'
-    success_url = reverse_lazy('successful-registration')
+    success_url = reverse_lazy('success-registration')
 
 
 class SuccessfulRegistrationView(TemplateView):
-    template_name = 'account/success_registration.html'
+    template_name = 'movie/success_registration.html'
 
 
 # http://127.0.0.1:8000/account/activate/?u=24weaf25
@@ -29,6 +29,7 @@ class ActivationView(View):
         user.is_active = True
         user.activation_code = ''
         user.save()
+
         return render(request, 'movie/activation.html', {})
 
 
